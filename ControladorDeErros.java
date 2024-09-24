@@ -1,4 +1,4 @@
-public class ControladorDeErros implements Cloneable
+/*public class ControladorDeErros implements Cloneable
 {
     private int qtdMax, qtdErr=0;
 
@@ -31,7 +31,7 @@ public class ControladorDeErros implements Cloneable
             return true;
         else
             return false;
-        */
+
 
         return this.qtdErr==this.qtdMax;
     }
@@ -62,3 +62,4 @@ public class ControladorDeErros implements Cloneable
         // returnar uma cópia de this
     }
 }
+*/

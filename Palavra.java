@@ -1,4 +1,4 @@
-public class Palavra implements Comparable<Palavra>
+/*public class Palavra implements Comparable<Palavra>
 {
     private String texto;
 
@@ -53,4 +53,4 @@ public class Palavra implements Comparable<Palavra>
     {
         return this.texto.compareTo(palavra.texto);
     }
-}
+}*/

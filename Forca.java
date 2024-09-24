@@ -1,5 +1,5 @@
 import java.io.*;
-
+/*
 public class Forca
 {
     public static void main (String args [])
@@ -8,8 +8,7 @@ public class Forca
 
         do
         {
-			Palavra palavra =
-			BancoDePalavras.getPalavraSorteada();
+			Palavra palavra = BancoDePalavras.getPalavraSorteada();
 			
 			Tracinhos tracinhos = null;
 			try
@@ -98,3 +97,4 @@ public class Forca
         while (continuar=='S');
     }
 }
+*/

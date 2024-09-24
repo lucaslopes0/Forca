@@ -1,4 +1,4 @@
-public class BancoDePalavras
+/*public class BancoDePalavras
 {
     private static String[] palavras = 
     {
@@ -32,3 +32,4 @@ public class BancoDePalavras
         return palavra;
     }
 }
+*/

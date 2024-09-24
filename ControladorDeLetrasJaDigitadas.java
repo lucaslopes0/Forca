@@ -1,4 +1,4 @@
-public class ControladorDeLetrasJaDigitadas implements Cloneable
+/*public class ControladorDeLetrasJaDigitadas implements Cloneable
 {
     private String letrasJaDigitadas;
 
@@ -50,3 +50,4 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable
         // criar uma cópia do this com o construtor de cópia e retornar
     }
 }
+*/
