@@ -44,13 +44,17 @@ public class tracinhosTest implements Cloneable {
 
         @Override
         public String toString () {
-           // String[] vetor = new String[this.texto.length];
-            //for (int i = 0; i < this.texto.length; i++) {
-           //     this.texto.clone();
-           // }
-            String qtd = Arrays.toString(new int[]{this.texto.length});
-            System.out.println(this.texto.clone());
-            return qtd;
+            StringBuilder resultado = new StringBuilder();
+
+            for (int i = 0; i < this.texto.length; i++) {
+                resultado.append(this.texto[i]); // Adiciona o caractere
+                if (i < this.texto.length - 1) {
+                    resultado.append(" "); // Adiciona um espaço se não for o último
+                }
+            }
+            return resultado.toString();
+
+
             // retorna um String com TODOS os caracteres que ha
             // no vetor this.texto, intercalados com espacos em
             // branco
