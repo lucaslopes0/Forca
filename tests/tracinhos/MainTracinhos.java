@@ -18,7 +18,7 @@ public class MainTracinhos{
                 System.out.println(err.getMessage());
             }
             trc.isAindaComTracinhos();
-            trc.toString();
+            //System.out.println(this.texto);
         } while (trc.isAindaComTracinhos());
     }
 }
