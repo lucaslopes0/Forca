@@ -19,3 +19,4 @@ e que todas funcionam COMPLETAMENTE, uma vez que nem todos
 os métodos de todas elas sao usado na classe Forca.
 
 Ao trabalho!
+//
