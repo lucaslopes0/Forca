@@ -9,7 +9,7 @@ public class Forca
         do
         {
 			Palavra palavra = BancoDePalavras.getPalavraSorteada();
-			
+
 			Tracinhos tracinhos = null;
 			try
 			{
@@ -17,11 +17,11 @@ public class Forca
             }
             catch (Exception erro)
             {}
-            
+
 			ControladorDeLetrasJaDigitadas
 			controladorDeLetrasJaDigitadas =
 			new ControladorDeLetrasJaDigitadas ();
-			
+
 			ControladorDeErros controladorDeErros = null;
 			try
 			{
@@ -30,20 +30,22 @@ public class Forca
 			catch (Exception erro)
 			{}
 
+
 			while (tracinhos.isAindaComTracinhos() &&
 				  !controladorDeErros.isAtingidoMaximoDeErros())
 			{
-				System.out.println ("Palavra...: "+tracinhos);
-				System.out.println ("Digitadas.: "+controladorDeLetrasJaDigitadas);
-				System.out.println ("Erros.....: "+controladorDeErros);
-
 				try
 				{
-					System.out.print   ("Qual letra? ");
+					System.out.println ("\nPalavra...: "+tracinhos);
+					System.out.println ("Digitadas.: "+controladorDeLetrasJaDigitadas);
+					System.out.println ("Erros.....: "+controladorDeErros);
+
+					System.out.print("Qual letra? ");
 					char letra = Character.toUpperCase (Teclado.getUmChar());
 
-					if (controladorDeLetrasJaDigitadas.isJaDigitada (letra))
-						System.err.println ("Essa letra ja foi digitada!\n");
+					if (controladorDeLetrasJaDigitadas.isJaDigitada(letra)) {
+						System.err.println("Essa letra ja foi digitada!\n");
+					}
 					else
 					{
 						controladorDeLetrasJaDigitadas.registre (letra);
@@ -52,7 +54,7 @@ public class Forca
 
 						if (qtd==0)
 						{
-							System.err.println ("A palavra nao tem essa letra!\n");
+							System.err.println("\nA palavra nao tem essa letra!\n");
 							controladorDeErros.registreUmErro ();
 						}
 						else
@@ -62,7 +64,6 @@ public class Forca
 								int posicao = palavra.getPosicaoDaIezimaOcorrencia (i,letra);
 								tracinhos.revele (posicao, letra);
 							}
-							System.out.println ();
 						}
 					}
 				}
