@@ -94,3 +94,5 @@ public class PalavraTest /*implements Comparable<PalavraTest>*/{
         return this.texto.compareTo(palavra.texto);
     }
 }
+
+//
