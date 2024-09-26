@@ -1,53 +1,96 @@
-/*public class ControladorDeLetrasJaDigitadas implements Cloneable
+package Forca;
+
+import Forca.tests.controladordeletrasjadigitadas.ControladorDeLetras;
+
+public class ControladorDeLetrasJaDigitadas implements Cloneable
 {
     private String letrasJaDigitadas;
 
     public ControladorDeLetrasJaDigitadas ()
     {
-        // torna this.letrasJaDigitadas igual ao String vazio
+        this.letrasJaDigitadas = "";
     }
 
     public boolean isJaDigitada (char letra)
     {
-        // percorrer o String this.letrasJaDigitadas e verificar se ele
-        // possui a letra fornecida, retornando true em caso afirmativo
-        // ou false em caso negativo
+        for (int i = 0; i < this.letrasJaDigitadas.length(); i++) {
+            if (this.letrasJaDigitadas.charAt(i) == letra){
+                return true;
+            }
+        }
+        return false;
     }
 
     public void registre (char letra) throws Exception
     {
-		// verifica se a letra fornecida ja foi digitada (pode usar
-		// o método this.isJaDigitada, para isso), lancando uma exceção
-		// em caso afirmativo.
-		// concatena a letra fornecida a this.letrasJaDigitadas.
+        if (this.isJaDigitada(letra)) throw new Exception("Error: Letra Já Digitada!");
+
+        for (int i = 0; i < this.letrasJaDigitadas.length(); i++) {
+            System.out.println(this.letrasJaDigitadas + letra);
+        }
     }
 
+    @Override
     public String toString ()
     {
-		// retorna um String com TODAS as letras presentes em
-		// this.letrasJaDigitadas separadas por vírgula (,).
+        StringBuilder str = new StringBuilder();
+        for (int i = 0; i < this.letrasJaDigitadas.length(); i++) {
+            str.append(this.letrasJaDigitadas.charAt(i));
+            if (i < this.letrasJaDigitadas.length()-1){
+                str.append(",");
+            }
+        }
+        return str.toString();
     }
 
+    @Override
     public boolean equals (Object obj)
     {
-        // verificar se this e obj são iguais
+        if (this.letrasJaDigitadas == obj) return true;
+
+        if(obj == null) return false;
+
+        if (obj.getClass() != this.letrasJaDigitadas.getClass()) return false;
+
+        ControladorDeLetrasJaDigitadas ctrl = (ControladorDeLetrasJaDigitadas) obj;
+
+        if (ctrl.letrasJaDigitadas.length() != this.letrasJaDigitadas.length()) return false;
+
+        for (int i = 0; i < ctrl.letrasJaDigitadas.length(); i++) {
+            if (ctrl.letrasJaDigitadas.charAt(i) != this.letrasJaDigitadas.charAt(i)){
+                return false;
+            }
+        }
+        return true;
     }
 
+    @Override
     public int hashCode ()
     {
-        // calcular e retornar o hashcode de this
+        int hs = 1;
+        if (this.letrasJaDigitadas!=null) {
+            for (int i = 0; i < this.letrasJaDigitadas.length(); i++) {
+                hs = hs * 11 + this.letrasJaDigitadas.charAt(i);
+            }
+        }
+        if (hs<0) hs=-hs;
+        return hs;
     }
 
-    public ControladorDeLetrasJaDigitadas(
-    ControladorDeLetrasJaDigitadas controladorDeLetrasJaDigitadas)
-    throws Exception // construtor de cópia
-    {
-        // copiar c.letrasJaDigitadas em this.letrasJaDigitadas
+    public ControladorDeLetrasJaDigitadas(ControladorDeLetrasJaDigitadas c) throws Exception {// construtor de cópia
+        try {
+            c.letrasJaDigitadas=this.letrasJaDigitadas;
+        }catch (Exception err){
+            throw new Exception("Error");
+        }
     }
 
     public Object clone ()
     {
-        // criar uma cópia do this com o construtor de cópia e retornar
+        ControladorDeLetrasJaDigitadas ctr = null;
+        try {
+            ctr = new ControladorDeLetrasJaDigitadas(this);
+        }catch (Exception ignored){}
+        return ctr;
     }
 }
-*/
