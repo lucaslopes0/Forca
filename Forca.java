@@ -1,5 +1,5 @@
-import java.io.*;
-/*
+package Forca;
+
 public class Forca
 {
     public static void main (String args [])
@@ -97,4 +97,3 @@ public class Forca
         while (continuar=='S');
     }
 }
-*/
