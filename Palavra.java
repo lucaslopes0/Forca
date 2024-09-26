@@ -82,3 +82,4 @@ public class Palavra implements Comparable<Palavra>
         return this.texto.compareTo(palavra.texto);
     }
 }
+//
