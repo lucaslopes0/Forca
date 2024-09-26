@@ -24,7 +24,7 @@ public class tracinhosTest implements Cloneable {
                 throw new Exception("Error: Posicao fora do limite!");
             }
             try {
-                this.texto[posicao - 1] = letra;
+                this.texto[posicao] = letra;
             }catch (Exception err){
                 throw new Exception("Error: Posicao fora do limite!");
             }
