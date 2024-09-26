@@ -12,7 +12,6 @@ public class Tracinhos implements Cloneable
         for(int i=0;i<qtd;i++){
             this.texto[i]='_';
         }
-        System.out.println(this.texto);
     }
 
     public void revele (int posicao, char letra) throws Exception {
@@ -20,11 +19,10 @@ public class Tracinhos implements Cloneable
             throw new Exception("Error: Posicao fora do limite!");
         }
         try {
-            this.texto[posicao - 1] = letra;
+            this.texto[posicao] = letra;
         }catch (Exception err){
             throw new Exception("Error: Posicao fora do limite!");
         }
-        System.out.println(this.texto);
     }
 
     public boolean isAindaComTracinhos () {
