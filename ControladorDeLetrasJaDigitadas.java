@@ -25,9 +25,7 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable
     {
         if (this.isJaDigitada(letra)) throw new Exception("Error: Letra Já Digitada!");
 
-        for (int i = 0; i < this.letrasJaDigitadas.length(); i++) {
-            System.out.println(this.letrasJaDigitadas + letra);
-        }
+        this.letrasJaDigitadas+=letra;
     }
 
     @Override
