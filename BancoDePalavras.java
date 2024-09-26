@@ -1,4 +1,6 @@
-/*public class BancoDePalavras
+package Forca;
+
+public class BancoDePalavras
 {
     private static String[] palavras = 
     {
@@ -32,4 +34,3 @@
         return palavra;
     }
 }
-*/
