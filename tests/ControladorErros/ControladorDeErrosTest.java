@@ -33,7 +33,7 @@ public class ControladorDeErrosTest implements Cloneable{
         // retorna true se this.qtdErr for igual a this.qtdMax,
         // ou então false, caso contrario.
     }
-
+    @Override
     public String toString ()
     {
         return this.qtdErr + "/" + this.qtdMax;
@@ -48,7 +48,6 @@ public class ControladorDeErrosTest implements Cloneable{
         // verificar se this e obj possuem o mesmo conteúdo, retornando
         // true no caso afirmativo ou false no caso negativo
     }
-
     @Override
     public int hashCode ()
     {
@@ -75,7 +74,7 @@ public class ControladorDeErrosTest implements Cloneable{
         ControladorDeErrosTest c = null;
         try {
             c = new ControladorDeErrosTest(this);
-        }catch (Exception Ignored){}
+        }catch (Exception ignored){}
         return c;
         // returnar uma cópia de this
     }
