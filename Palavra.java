@@ -1,4 +1,4 @@
-import Forca.tests.palavras.PalavraTest;
+package Forca;
 
 public class Palavra implements Comparable<Palavra>
 {
