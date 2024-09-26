@@ -31,3 +31,4 @@ public class BancoDePalavrasTest {
         return palavra;
     }
 }
+//

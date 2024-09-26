@@ -1,5 +1,5 @@
 package Forca.tests.palavras;
-//
+
 public class MainPalavrasTest {
     public static void main(String[] args ) throws Exception {
         PalavraTest word = new PalavraTest("teste");

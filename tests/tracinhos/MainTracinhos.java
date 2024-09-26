@@ -22,3 +22,4 @@ public class MainTracinhos{
         } while (trc.isAindaComTracinhos());
     }
 }
+//

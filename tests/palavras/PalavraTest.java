@@ -1,6 +1,6 @@
 package Forca.tests.palavras;
 
-public class PalavraTest /*implements Comparable<PalavraTest>*/{
+public class PalavraTest implements Comparable<PalavraTest>{
     private String texto;
 
     public PalavraTest (String texto) throws Exception {
@@ -95,4 +95,3 @@ public class PalavraTest /*implements Comparable<PalavraTest>*/{
     }
 }
 
-//
